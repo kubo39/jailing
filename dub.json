@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"Hiroki Noda"
+	],
+	"copyright": "Copyright © 2019, Hiroki Noda",
+	"description": "Porting kazuho/jailing to D, for learning.",
+	"license": "BSL-1.0",
+	"name": "jailing"
+}

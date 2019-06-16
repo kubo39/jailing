@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/jailing
+jailing.so
+jailing.dylib
+jailing.dll
+jailing.a
+jailing.lib
+jailing-test-*
+*.exe
+*.o
+*.obj
+*.lst
