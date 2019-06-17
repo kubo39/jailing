@@ -20,6 +20,7 @@ import std.process;
 import std.regex;
 import std.stdio;
 import std.string : toStringz;
+import std.typecons : Yes;
 
 version (linux):
 
@@ -187,7 +188,7 @@ int main(string[] args)
     {
         immutable path = buildPath(root, file);
         if (!exists(path))
-            executeShell("cp -p /" ~ file ~ " " ~ path);
+            std.file.copy(buildPath("/", file), path, Yes.preserveAttributes);
     }
 
     // bind the directories
