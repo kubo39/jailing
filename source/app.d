@@ -118,9 +118,9 @@ void dropCapabilities()
         if (!(i in KEEP_CAPS))
         {
             // test if capabilitiy exists
-            if (prctl(23, i, 0, 0, 0) < 0)
+            if (prctl(PR_CAPBSET_READ, i, 0, 0, 0) < 0)
                 break;
-            if (prctl(24, i, 0, 0, 0) < 0)
+            if (prctl(PR_CAPBSET_DROP, i, 0, 0, 0) < 0)
                 stderr.writefln("failed to drop capability:%d", i);
         }
     }
